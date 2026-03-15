@@ -109,14 +109,14 @@
 // }
 
 
-// 12. Next Greater Element
+12. Next Greater Element
 
-// #include<stdio.h>
-// int main(){
-//   int arr[]={4,5,2,25};
-//   for(int )
+#include<stdio.h>
+int main(){
+  int arr[]={4,5,2,25};
+  for(int )
 
-// }
+}
 
 
 

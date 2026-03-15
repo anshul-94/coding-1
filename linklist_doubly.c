@@ -24,7 +24,6 @@ void add_end(int n){
   }
 }
 
-
 void add_f(int n){
   newnode=(struct node*)malloc(sizeof(struct node));
   newnode->data=n;
