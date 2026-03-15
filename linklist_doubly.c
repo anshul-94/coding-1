@@ -54,8 +54,6 @@ void show(){
   }
 }
 
-
-
 void del_f(){
   if(head==NULL){
     printf("linklist is empty");
@@ -96,8 +94,6 @@ void del_pos(int pos){
     temp=head;
     while(temp->next!=NULL && pos-->0){
       if(temp->next==NULL){
-        
-
       }
       temp=temp->next;
     }
