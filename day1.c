@@ -110,17 +110,55 @@
 
 
 // 12. Next Greater Element
+// #include<stdio.h>
+// int main(){
+//   int arr[]={4,5,2,25};
+//   for(int i=0;i<4;i++){
+//     for(int j=i;j<4;j++){
+//       if(arr[j]>arr[i]){
+//         printf("%d ",arr[j]);
+//         break;
+//       }
+//     }
+//   }
+//   printf("%d",-1);
+// }
+
+//  13. Find Majority Element (> n/3)
 #include<stdio.h>
 int main(){
-  int arr[]={4,5,2,25};
-  for(int i=0;i<4;i++){
-    for(int j=i;j<4;j++){
-      if(arr[j]>arr[i]){
-        printf("%d ",arr[j]);
-        break;
+  int arr[]={2,2,3,1,2};
+  for(int i=0;i<6;i++){
+    for(int j=0;j<6;j++){
+      if(arr[i]<arr[j]){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
       }
     }
   }
-  printf("%d",-1);
+    for(int i=0;i<6;i++){
+      printf("%d ",arr[i]);
+    }
+
+int count=1;
+int count2=0;
+int num;
+    for(int i=0;i<6;i++){
+      for(int j=i+1;j<6;j++){
+        if(arr[i]==arr[j]){
+          count++;
+        }
+        else{
+          if(count >count2){
+            count2=count;
+            num=arr[i];
+          }
+          count=1;
+          break;
+        }
+    }
+  }
+  printf("\nnumber freq  %d\n",num);
 }
 
