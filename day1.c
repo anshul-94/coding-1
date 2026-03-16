@@ -109,14 +109,18 @@
 // }
 
 
-12. Next Greater Element
-
+// 12. Next Greater Element
 #include<stdio.h>
 int main(){
   int arr[]={4,5,2,25};
-  for(int )
-
+  for(int i=0;i<4;i++){
+    for(int j=i;j<4;j++){
+      if(arr[j]>arr[i]){
+        printf("%d ",arr[j]);
+        break;
+      }
+    }
+  }
+  printf("%d",-1);
 }
-
-
 
