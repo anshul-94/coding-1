@@ -174,24 +174,64 @@
 
 
 
-// 1. Product of Array Except Self
-#include<stdio.h>
-int main(){
-  int n=4;
-  int arr[4]={1,2,3,4};
-  int pro[4];
-  int left[4],right[4];
-  left[0]=1;
+// // 1. Product of Array Except Self
+// #include<stdio.h>
+// int main(){
+//   int n=4;
+//   int arr[4]={1,2,3,4};
+//   int pro[4];
+//   int left[4],right[4];
+//   left[0]=1;
 
-  for(int i=1;i<4;i++){
-    left[i]=left[i-1]*arr[i-1];
-  }
+//   for(int i=1;i<4;i++){
+//     left[i]=left[i-1]*arr[i-1];
+//   }
 
-  right[n-1]=1;
-  for(int i=n-2;i>=0;i--){
-    right[i]=right[i+1]*arr[i+1];
-  }
-    for(int i=0;i<n;i++){
-        printf("%d ", right[i]*left[i]);
-    }
-}
+//   right[n-1]=1;
+//   for(int i=n-2;i>=0;i--){
+//     right[i]=right[i+1]*arr[i+1];
+//   }
+//     for(int i=0;i<n;i++){
+//         printf("%d ", right[i]*left[i]);
+//     }
+// }
+
+
+// // 3. Maximum Product Subarray
+// #include<stdio.h>
+// int main(){
+//   int find=0;
+//   int pro=1;
+//   int max=0;
+//   int s1,s2;
+//   int arr[4]={2,3,-2,4};
+//   for (int i=0;i<4-1;i++){
+//       pro=arr[i]*arr[i+1];
+//       if(pro>max){
+//         s1=i;
+//         s2=i+1;
+//         max=pro;
+//       }
+//   }
+//   printf("%d %d",arr[s1],arr[s2]);
+// }
+
+// // 7. Find All Subarrays with Zero Sum (Count)
+// #include <stdio.h>
+// int main() {
+//     int arr[] = {4,2,-3,1,6};
+//     int n = 5;
+//     int count = 0;
+//     for(int i=0;i<n;i++){
+//       int sum = 0;
+//       for(int j=i;j<n;j++){
+//       sum += arr[j];
+//         if(sum == 0)
+//           count++;
+//         }
+//       }
+//     printf("%d", count);
+// }
+
+
+
