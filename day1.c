@@ -43,6 +43,8 @@
 // }
 
 
+
+
 // 3. Maximum Product Subarray
 // #include<stdio.h>
 // int main(){
@@ -62,6 +64,7 @@
 // }
 
 
+
 // // 4. Find Duplicate Number (Cycle Detection)
 // #include<stdio.h>
 // int main(){
@@ -78,6 +81,7 @@
 //       }
 //   }
 // }
+
 
 
 // // 5. Subarray with Given Sum (Positive Numbers)
@@ -109,6 +113,7 @@
 // }
 
 
+
 // 12. Next Greater Element
 // #include<stdio.h>
 // int main(){
@@ -124,41 +129,69 @@
 //   printf("%d",-1);
 // }
 
-//  13. Find Majority Element (> n/3)
+
+
+
+// //  13. Find Majority Element (> n/3)
+// #include<stdio.h>
+// int main(){
+//   int arr[]={2,2,3,1,2};
+//   for(int i=0;i<6;i++){
+//     for(int j=0;j<6;j++){
+//       if(arr[i]<arr[j]){
+//         int temp=arr[i];
+//         arr[i]=arr[j];
+//         arr[j]=temp;
+//       }
+//     }
+//   }
+//     for(int i=0;i<6;i++){
+//       printf("%d ",arr[i]);
+//     }
+
+// int count=1;
+// int count2=0;
+// int num;
+//     for(int i=0;i<6;i++){
+//       for(int j=i+1;j<6;j++){
+//         if(arr[i]==arr[j]){
+//           count++;
+//         }
+//         else{
+//           if(count >count2){
+//             count2=count;
+//             num=arr[i];
+//           }
+//           count=1;
+//           break;
+//         }
+//     }
+//   }
+//   printf("\nnumber freq  %d\n",num);
+// }
+
+
+
+
+
+// 1. Product of Array Except Self
 #include<stdio.h>
 int main(){
-  int arr[]={2,2,3,1,2};
-  for(int i=0;i<6;i++){
-    for(int j=0;j<6;j++){
-      if(arr[i]<arr[j]){
-        int temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
-      }
-    }
-  }
-    for(int i=0;i<6;i++){
-      printf("%d ",arr[i]);
-    }
+  int n=4;
+  int arr[4]={1,2,3,4};
+  int pro[4];
+  int left[4],right[4];
+  left[0]=1;
 
-int count=1;
-int count2=0;
-int num;
-    for(int i=0;i<6;i++){
-      for(int j=i+1;j<6;j++){
-        if(arr[i]==arr[j]){
-          count++;
-        }
-        else{
-          if(count >count2){
-            count2=count;
-            num=arr[i];
-          }
-          count=1;
-          break;
-        }
-    }
+  for(int i=1;i<4;i++){
+    left[i]=left[i-1]*arr[i-1];
   }
-  printf("\nnumber freq  %d\n",num);
+
+  right[n-1]=1;
+  for(int i=n-2;i>=0;i--){
+    right[i]=right[i+1]*arr[i+1];
+  }
+    for(int i=0;i<n;i++){
+        printf("%d ", right[i]*left[i]);
+    }
 }
-
