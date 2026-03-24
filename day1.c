@@ -179,21 +179,17 @@
 // int main(){
 //   int n=4;
 //   int arr[4]={1,2,3,4};
-//   int pro[4];
-//   int left[4],right[4];
-//   left[0]=1;
+//   int left[4]={1,1,1,1},right[4]={1,1,1,1};
 
 //   for(int i=1;i<4;i++){
 //     left[i]=left[i-1]*arr[i-1];
 //   }
-
-//   right[n-1]=1;
-//   for(int i=n-2;i>=0;i--){
-//     right[i]=right[i+1]*arr[i+1];
+//   for(int j=n-2;j>=0;j--){
+//         right[j]=right[j+1]*arr[j+1];
 //   }
-//     for(int i=0;i<n;i++){
-//         printf("%d ", right[i]*left[i]);
-//     }
+//   for(int i=0;i<4;i++){
+//     printf("%d ",left[i]*right[i]);
+//   }
 // }
 
 
@@ -217,34 +213,51 @@
 // }
 
 // // 7. Find All Subarrays with Zero Sum (Count)
+#include <stdio.h>
+int main() {
+    int arr[] = {4,2,-3,1,6};
+    int n = 5;
+    int count = 1;
+    int sum=0;
+    for(int i=0;i<n;i++){
+      sum=0;
+      for(int j=i;j<5;j++){
+        sum+=arr[j];
+        if(sum==0){
+          printf("%d",count++);
+        }
+      }
+    }
+}
+
+// // 9. Find Peak Element
 // #include <stdio.h>
 // int main() {
-//     int arr[] = {4,2,-3,1,6};
-//     int n = 5;
-//     int count = 0;
-//     for(int i=0;i<n;i++){
-//       int sum = 0;
-//       for(int j=i;j<n;j++){
-//       sum += arr[j];
-//         if(sum == 0)
-//           count++;
-//         }
+//     int arr[] = {1,2,3,4};
+//     int n = 4;
+//     for(int i=0;i<n-1;i++){
+//       if(arr[i]>arr[i+1]){
+//         printf("%d",arr[i]);
+//         return 0;
 //       }
-//     printf("%d", count);
+//     }
+//     printf("%d",arr[3]);
 // }
 
 
-#include <stdio.h>
+// 12. Next Greater Element
+// #include<stdio.h>
+// int main(){
+//   int arr[]={4,5,2,1};
+//   for(int i=0;i<4;i++){
+//     for(int j=i;j<4;j++){
+//       if(arr[j]>arr[i]){
+//         printf("%d ",arr[j]);
+//         break;
+//       }
+//     }
+//     printf("-1 ");
+//   }
+// }
 
-int main() {
-    int arr[] = {1,2,3,4};
-    int n = 4;
-    for(int i=0;i<n-1;i++){
-      if(arr[i]>arr[i+1]){
-        printf("%d",arr[i]);
-        return 0;
-      }
-    }
-    printf("%d",arr[3]);
-}
 
