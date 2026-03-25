@@ -213,22 +213,22 @@
 // }
 
 // // 7. Find All Subarrays with Zero Sum (Count)
-#include <stdio.h>
-int main() {
-    int arr[] = {4,2,-3,1,6};
-    int n = 5;
-    int count = 1;
-    int sum=0;
-    for(int i=0;i<n;i++){
-      sum=0;
-      for(int j=i;j<5;j++){
-        sum+=arr[j];
-        if(sum==0){
-          printf("%d",count++);
-        }
-      }
-    }
-}
+// #include <stdio.h>
+// int main() {
+//     int arr[] = {4,2,-3,1,6};
+//     int n = 5;
+//     int count = 1;
+//     int sum=0;
+//     for(int i=0;i<n;i++){
+//       sum=0;
+//       for(int j=i;j<5;j++){
+//         sum+=arr[j];
+//         if(sum==0){
+//           printf("%d",count++);
+//         }
+//       }
+//     }
+// }
 
 // // 9. Find Peak Element
 // #include <stdio.h>
@@ -261,3 +261,12 @@ int main() {
 // }
 
 
+
+#include<stdio.h>
+int main(){
+  int arr[]={1,2,3,4,5};
+  for(int i=0;i<5;i++){
+    
+  }
+
+}
